@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Footer, NavBar } from "@/components";
 
 export const metadata: Metadata = {
   title: "Inspire",
@@ -13,7 +14,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <NavBar />
+
+        <main>{children}</main>
+
+        <Footer />
+      </body>
     </html>
   );
 }
